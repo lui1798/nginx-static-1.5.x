@@ -2,6 +2,8 @@
 #
 # basic dependencies
 
+set -e
+
 sudo apt-get install libxslt1-dev libxml2-dev zlib1g-dev libpcre3-dev libbz2-dev libssl-dev
 
 # download nginx and openssl
@@ -47,7 +49,7 @@ tar xf openssl-${OPENSSL_VERSION}.tar.gz
             --with-http_gzip_static_module --with-http_auth_request_module \
             --with-http_random_index_module --with-http_secure_link_module \
             --with-http_degradation_module --with-http_stub_status_module \
-            --with-mail --with-mail_ssl_module --with-openssl=./${OPENSSL_VERSION}
+            --with-mail --with-mail_ssl_module --with-openssl=./openssl-${OPENSSL_VERSION}
 
 # with -j > 1 nginx's tries to link openssl before it gets built
 
