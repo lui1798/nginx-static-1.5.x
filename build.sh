@@ -49,6 +49,7 @@ tar xf openssl-1.0.1s.tar.gz
 # with -j > 1 nginx's tries to link openssl before it gets built
 
 make -j1
+make -j1 install
 
 # nginx binary built on Debian Etch amd64 (gcc 4.1):
 # https://dl.dropboxusercontent.com/u/90980609/nginx-1.5.6-amd64.tar.bz2
