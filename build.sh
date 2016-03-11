@@ -34,7 +34,7 @@ tar xf openssl-1.0.1s.tar.gz
 #  1) logging to /opt/nginx/logs/error.log 
 #  2) reading cfg file from /opt/nginx/conf/nginx.conf
 
-./configure --prefix=/opt/nginx --with-cc-opt="-static -static-libgcc" \
+./configure --prefix=../nginx-static --with-cc-opt="-static -static-libgcc" \
             --with-ld-opt="-static" --with-cpu-opt=generic --with-pcre \
             --with-mail --with-ipv6 --with-poll_module --with-select_module \
             --with-rtsig_module --with-select_module --with-poll_module \
