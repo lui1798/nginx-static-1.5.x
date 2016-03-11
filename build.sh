@@ -6,10 +6,10 @@ sudo apt-get install libxslt1-dev libxml2-dev zlib1g-dev libpcre3-dev libbz2-dev
 
 # download nginx and openssl
 
-wget http://nginx.org/download/nginx-1.5.6.tar.gz
-tar xf nginx-1.5.6.tar.gz; cd nginx-1.5.6
-wget http://www.openssl.org/source/openssl-1.0.1e.tar.gz
-tar xf openssl-1.0.1e.tar.gz
+wget http://nginx.org/download/nginx-1.5.13.tar.gz
+tar xf nginx-1.5.13.tar.gz; cd nginx-1.5.13
+wget http://www.openssl.org/source/openssl-1.0.1s.tar.gz
+tar xf openssl-1.0.1s.tar.gz
 
 # configure - this configuration enables every possible module, except:
 #
@@ -44,7 +44,7 @@ tar xf openssl-1.0.1e.tar.gz
             --with-http_gzip_static_module --with-http_auth_request_module \
             --with-http_random_index_module --with-http_secure_link_module \
             --with-http_degradation_module --with-http_stub_status_module \
-            --with-mail --with-mail_ssl_module --with-openssl=./openssl-1.0.1e
+            --with-mail --with-mail_ssl_module --with-openssl=./openssl-1.0.1s
 
 # with -j > 1 nginx's tries to link openssl before it gets built
 
